@@ -9,6 +9,7 @@ document.getElementById('writeButton').addEventListener('click', async () => {
             document.getElementById('message').textContent = `Error: ${error}`;
         }
     } else {
+        console.log('NDEFWriter is not available in window');
         document.getElementById('message').textContent = 'Web NFC is not supported on this device.';
     }
 });
@@ -28,6 +29,7 @@ document.getElementById('readButton').addEventListener('click', async () => {
             document.getElementById('message').textContent = `Error: ${error}`;
         }
     } else {
+        console.log('NDEFReader is not available in window');
         document.getElementById('message').textContent = 'Web NFC is not supported on this device.';
     }
 });
